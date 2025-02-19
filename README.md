@@ -56,22 +56,26 @@ Print real-time loss metrics during training and validation.
 The code includes a helper function imshow that displays a grid of images (anchor, positive, and negative). This is useful for ensuring that the data augmentation and triplet creation are working as expected.
 
 ## Model Architecture
-The triplet network is built on a modified ResNet50:
 
+
+
+The triplet network is built on a modified ResNet50:
 -**Backbone: A pre-trained ResNet50 model (from torchvision.models) with its final classification layer replaced.**
 -**Embedding Head:**
-    -A Linear layer reducing the features to 512 dimensions.
-    -Batch Normalization.
-    -ReLU activation.
-    -A final Linear layer projecting to an embedding size (default 128).
+    - A Linear layer reducing the features to 512 dimensions.
+    - Batch Normalization.
+    - ReLU activation.
+    - A final Linear layer projecting to an embedding size (default 128).
     **Training & Validation**
-    -Loss Function: The custom TripletLoss computes the difference between the squared Euclidean distances of the anchor-positive and anchor-negative pairs, enforcing a           margin.
-    -Optimizer & Scheduler: The model is optimized using Adam (learning rate 0.0002) with a learning rate scheduler that steps down every 5 epochs.
-    -Epochs: Default training runs for 10 epochs, which can be adjusted as needed.
+    - Loss Function: The custom TripletLoss computes the difference between the squared Euclidean distances of the anchor-positive and anchor-negative pairs, enforcing a           margin.
+    - Optimizer & Scheduler: The model is optimized using Adam (learning rate 0.0002) with a learning rate scheduler that steps down every 5 epochs.
+    - Epochs: Default training runs for 10 epochs, which can be adjusted as needed.
 ## Contributing
-Contributions are welcome! If you have improvements or bug fixes, please:
 
--Fork the repository.
--Create a new branch for your feature or bug fix.
--Submit a pull request with detailed explanations of your changes.
--For major changes, open an issue first to discuss your approach.
+
+
+Contributions are welcome! If you have improvements or bug fixes, please:
+- Fork the repository.
+- Create a new branch for your feature or bug fix.
+- Submit a pull request with detailed explanations of your changes.
+- For major changes, open an issue first to discuss your approach.
