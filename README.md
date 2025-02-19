@@ -32,6 +32,7 @@ pip install torch torchvision matplotlib pillow numpy
 ├── train.py            # Main training script containing model, loss, and training loop
 ├── README.md           # Project documentation
 └── [dataset]           # Your dataset directory (e.g., att_faces)
+```
 
 ## Usage
 Prepare the Dataset:
