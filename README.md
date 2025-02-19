@@ -60,13 +60,13 @@ The code includes a helper function imshow that displays a grid of images (ancho
 
 
 The triplet network is built on a modified ResNet50:
--**Backbone: A pre-trained ResNet50 model (from torchvision.models) with its final classification layer replaced.**
--**Embedding Head:**
+- **Backbone: A pre-trained ResNet50 model (from torchvision.models) with its final classification layer replaced.**
+- **Embedding Head:**
     - A Linear layer reducing the features to 512 dimensions.
     - Batch Normalization.
     - ReLU activation.
     - A final Linear layer projecting to an embedding size (default 128).
-    **Training & Validation**
+   - **Training & Validation**
     - Loss Function: The custom TripletLoss computes the difference between the squared Euclidean distances of the anchor-positive and anchor-negative pairs, enforcing a           margin.
     - Optimizer & Scheduler: The model is optimized using Adam (learning rate 0.0002) with a learning rate scheduler that steps down every 5 epochs.
     - Epochs: Default training runs for 10 epochs, which can be adjusted as needed.
