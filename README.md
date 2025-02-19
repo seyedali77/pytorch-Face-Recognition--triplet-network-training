@@ -33,3 +33,10 @@ pip install torch torchvision matplotlib pillow numpy
 ├── README.md           # Project documentation
 └── [dataset]           # Your dataset directory (e.g., att_faces)
 
+## Usage
+Prepare the Dataset:
+
+The project expects the dataset to be organized as follows:
+/path/to/att_faces/
+    ├── train/   # Training images organized by class
+    └── valid/   # Validation images organized by class
